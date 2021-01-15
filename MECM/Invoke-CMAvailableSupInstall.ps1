@@ -1,5 +1,5 @@
 
-function Invoke-AvailableSupInstall
+function Invoke-CMAvailableSupInstall
 {
 <#	
 	.NOTES
@@ -8,7 +8,7 @@ function Invoke-AvailableSupInstall
 	 Created on:   	08/20/2020
 	 Created by:   	Mike White
 	 Organization: 	
-	 Filename: Invoke-AvailableSupInstall
+	 Filename: Invoke-CMAvailableSupInstall
 	 Version: 1.0.8.20.20
 	 Initial Script Function
 	===========================================================================
@@ -22,7 +22,7 @@ function Invoke-AvailableSupInstall
 		Action to perform Get or Install
 	
 	.EXAMPLE 
-		Invoke-DVNAvailableSupInstall -Computername {computername} -Action get
+		Invoke-CMAvailableSupInstall -Computername {computername} -Action get
 	
 		Connect to Computer and get available Software Updates. returns Evaluation State, ComputerName, Update Name. 
 
@@ -31,18 +31,18 @@ function Invoke-AvailableSupInstall
 		JobStatePendingSoftReboot = 8 {computername} 2020-08 Cumulative Update for Windows Server 2016 for x64-based Systems (KB4571694)
 	
 	.EXAMPLE
-		Invoke-DVNAvailableSupInstall -Computername {computername} -Action Install
+		Invoke-CMAvailableSupInstall -Computername {computername} -Action Install
 	
 		Connect to Computer and Invoke Software Update Installs. 
 	
 	.EXAMPLE
-		Invoke-DVNAvailableSupInstall -Computername {computername},{computername},{computername} -Action get
+		Invoke-CMAvailableSupInstall -Computername {computername},{computername},{computername} -Action get
 	
 		Connect to Multiple Computers and get Update List with Evaluation States. 
 	
 	.EXAMPLE
 	
-		Invoke-DVNAvailableSupInstall -Computername {computername},{computername},{computername} -Action Install
+		Invoke-CMAvailableSupInstall -Computername {computername},{computername},{computername} -Action Install
 	
 		Connect to Multiple Computers and invoke Software Update Installs. 
 	
