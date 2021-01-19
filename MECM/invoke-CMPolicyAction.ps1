@@ -16,13 +16,13 @@ function Invoke-CMPolicyAction {
 		The action to be performed. 
 
 	.EXAMPLE
-		Invoke-dvnPolicyAction -ComputerName {computername} -Policy MachinePolicy
+		Invoke-CMPolicyAction -ComputerName {computername} -Policy MachinePolicy
 
 		This will cause the computer to request the SCCM Client Machine Policy from the SCCM Managment Point server. 
 
 
 	.EXAMPLE
-		Invoke-dvnPolicyAction -ComputerName {computername} -Policy SoftwareUpdatePolicy
+		Invoke-CMPolicyAction -ComputerName {computername} -Policy SoftwareUpdatePolicy
 			*WAIT A FEW MINUTES*
 		Invoke-dvnPolicyAction -ComputerName {computername} -Policy SoftwareUpdateEvaluation
 
@@ -30,7 +30,7 @@ function Invoke-CMPolicyAction {
 		whether they are due to be installed now. 
 
 	.EXAMPLE
-		Invoke-dvnPolicyAction -ComputerName {computername} -Policy SoftwareUpdateReportBack
+		Invoke-CMPolicyAction -ComputerName {computername} -Policy SoftwareUpdateReportBack
 
 		This command instructs the computer to report its patch status back to CM so that reports can show current and accurate 
 		information. Note, however, that multiple processes within CM can cause reporting to be delayed. The deployment data may
@@ -38,13 +38,13 @@ function Invoke-CMPolicyAction {
 		Patience is required. 
 
 	.EXAMPLE
-		Invoke-dvnPolicyAction -ComputerName {computername} -Policy SoftwareUpdateINSTALLATION -Confirm
+		Invoke-CMPolicyAction -ComputerName {computername} -Policy SoftwareUpdateINSTALLATION -Confirm
 
 		The SofwareUpdateINSTALLATION policy will ignore any maintenance windows or deployment deadlines and initiate 
 		an immediate installation of pending patches. To prevent accidental trigger, a confirmation is required. If 
 		no -Confirm switch is specified in the command, the script will prompt for confirmation:
 
-		Invoke-dvnPolicyAction -ComputerName {computername} -Policy SoftwareUpdateINSTALLATION
+		Invoke-CMPolicyAction -ComputerName {computername} -Policy SoftwareUpdateINSTALLATION
 
 		"Are you sure you want to force updates to INSTALL, ignoring all maintenance windows and schedules? (y/n*):"
 
