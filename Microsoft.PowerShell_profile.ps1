@@ -64,7 +64,7 @@ function cd.... { Set-Location ..\..\.. }
 ########################################################
 # Import functions form network share
 $topicsToImport = "SCCM", "Generial"
-$rootFunctionDir = "\\corp\mgmt$\sysUtil\scripts\PowerShell\FunctionLibrary"
+$rootFunctionDir = "\\share\PowerShell\FunctionLibrary"
 #\\corp\mgmt$\sysUtil\scripts\PowerShell\FunctionLibrary
 $topicDirs = Get-ChildItem $rootFunctionDir | Where-Object { $_.mode -match "d" }
 foreach ($dir in $topicDirs)
