@@ -92,7 +92,7 @@ If ((Test-Path $LogLocation) -eq $false)
 	New-Item -Path $LogLocation -ItemType Directory -Force | Out-Null
 }
 $xml.Save("$LogLocation\DellCommandUpdateSettingsInstallNotify.xml")
-$Arguments = "/Configure -importsettings=C:\Sysutil\logs\dcu\DellCommandUpdateSettingsInstallNotify.xml"
+$Arguments = "/Configure -importsettings=C:\temp\dcu\DellCommandUpdateSettingsInstallNotify.xml"
 
 $dcu = Start-Process -FilePath $EXE -ArgumentList $Arguments -Wait -Passthru
 [string]$dcuExit = $dcu.ExitCode
