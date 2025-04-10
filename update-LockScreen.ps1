@@ -4,7 +4,7 @@
 	 Created on:   	7/29/2022 9:04 AM
 	 Created by:   	White, Mike dipstah@dippydawg.net
 	 Organization: 	
-	 Filename: Update-DVNLockScreen
+	 Filename: Update-LockScreen
 
 		===========================================================================
 	.DESCRIPTION
